@@ -1,0 +1,43 @@
+PART 1: LINEAR
+
+1) Ask your TAs a clarifying question about the expected inputs/outputs for an edge case (5pts)
+
+2) Write a one-line description of your approach (5 pts)
+
+3) What is the big-O notation for how long this algorithm takes to run asssuming the worst case scenario? (2.5pts)
+
+4) What about the best-case scenario? (2.5pts)
+
+Reminder: Write 3 test cases in Main.java to ensure that your method works as intended. What are you testing in each case? (10pts)
+
+
+
+PART 2: BINARY
+
+1) Ask your TAs a clarifying question about the expected inputs/outputs for an edge case (5pts)
+
+2) Write a one-line description of your approach (5 pts)
+
+3) What is the big-O notation for how long this algorithm takes to run asssuming the worst case scenario? (2.5pts)
+
+4) What about the best-case scenario? (2.5pts)
+
+Reminder: Write 3 test cases in Main.java to ensure that your method works as intended. What are you testing in each case? (10pts)
+
+
+
+PART 3: COMPARE
+
+1) Write a one-line description of your approach (5pts)
+
+Reminder: Write 1 test case in Main.java to ensure that your method works as intended. What are you testing in each case? (5pts)
+
+
+PART 4: KEY TAKEAWAYS
+1) Which method is better? Binary or Linear? Why? (5pts)
+
+2) Is the above method ALWAYS better? If not, give an example. (5pts)
+3) Assume you are Bad Luck Brain and have the worst luck in the world and always get the worst-case scenario and there are 1000 changes to check. 
+      How many will you need to check for linear? (5pts)
+  
+      For binary? (5pts)
