@@ -9,10 +9,10 @@ public class Test {
 
     int n =Integer.parseInt(inputs[1]);
     int i =Integer.parseInt(inputs[2]);
-    if(inputs[0].equals("ls")){
+    if(inputs[0].equals("l")){
       System.out.println("l:"+BugFinder.findViaLinearSearch(n,i));
     }
-    if(inputs[0].equals("bs")){
+    if(inputs[0].equals("b")){
       System.out.println("b:"+BugFinder.findViaBinarySearch(n,i));
     }
     if(inputs[0].equals("c")){
