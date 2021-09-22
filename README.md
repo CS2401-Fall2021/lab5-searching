@@ -32,16 +32,18 @@ We want to return how many times we need to run our (hypothetical) tests to dete
 
 
 Implement findViaLinearSearch(int numberOfChanges, int indexOfFailure), which returns the number of steps it takes to find the bad change. (5 pts)
+* What should be returned if indexOfFailure>=numberOfChanges? (5 pts)
 * Write a one-line description of your approach (5 pts)
-* What is the big-O notation for how long this algorithm takes to run asssuming the worst case scenario? Justify(5pts)
-* What about the best-case scenario? Justify (5pts)
+* What is the big-O notation for how long this algorithm takes to run asssuming the worst case scenario? (2.5pts)
+* What about the best-case scenario? Justify (2.5pts)
 * Write 3 test cases in Main.java to ensure that your method works as intended. What are you testing in each case? (10pts)
 
 ## Approach 2: Binary search (35 pts)
 Implement findViaBinarySearch(int numberOfChanges, int indexOfFailure), which returns the number of steps it takes to find the bad change. (10pts)
+* What should be returned if indexOfFailure is negative? (5pts)
 * Write a one-line description of your approach (5 pts)
-* What is the big-O notation for how long this algorithm takes to run asssuming the worst case scenario? Justify(5pts)
-* What about the best-case scenario? Justify (5pts)
+* What is the big-O notation for how long this algorithm takes to run asssuming the worst case scenario? (2.5pts)
+* What about the best-case scenario? (2.5pts)
 * Write 3 test cases in Main.java to ensure that your method works as intended. What are you testing in each case? (10pts)
 
 
