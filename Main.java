@@ -5,9 +5,9 @@ public class Main {
     int targetIndex =25;
     boolean[] emulation= emulateCodeSubmissions(n,targetIndex);
     System.out.println("Expected linear steps: 25");
-    System.out.println("Actual linear steps: " +BugFinder.findViaLinearSearch(emulateCodeSubmissions(n,targetIndex)));
+    System.out.println("Actual linear steps: " +BugFinder.findViaLinearSearch(0,emulateCodeSubmissions(n,targetIndex)));
     System.out.println("Expected binary steps: 5");
-    System.out.println("Actual binary steps: " +BugFinder.findViaBinarySearch(emulateCodeSubmissions(n,targetIndex)));
+    System.out.println("Actual binary steps: " +BugFinder.findViaBinarySearch(0,n-1,emulateCodeSubmissions(n,targetIndex)));
     System.out.println("Expected isBinaryBetter: true");
     System.out.println("Actual isBinaryBetter : " +BugFinder.isBinarySearchBetter(emulateCodeSubmissions(n,targetIndex)));
   }
