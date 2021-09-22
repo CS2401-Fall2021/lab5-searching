@@ -23,7 +23,28 @@ In an ideal world, we would always have at least one value of False somewhere in
 
 
 ## Our output
-We want to return how many times we need to run our (hypothetical) tests to determine our bad change-essentially we need to count how many times we access values in the array we get from the emulateCodeSubmissions method. This is a number, so our output (or return type) is an integer.
+We want to return how many times we need to run our (hypothetical) tests to determine when our bad change occurred. In the simulation, this is equivalent to finding the index of the  FIRST "false" in the boolean[]. 
+The output will how many times we access different indices 
+
+### Even Length Example: 
+If we have the input boolean[] be [true,true,true, true, false, false]
+For linear, we will check the values in index 0,1,2,3 and 4.  
+
+For binary we will return the number of times we check the value at the MIDPOINT only.
+
+1) check the midpoint between index 0 and 5 (index 2) see that it is true so we want tocompare it to the next value (index 3) to see if it is different (it is not).
+2) We know our first false is now between 3 and 5 to be 4. 
+3) Check the midpoint value between 3 and 5 (4) to find it is false. Check the previous to see if it is different (it is! We found the first false)
+4) Since we've only calculated 2 midpoints, we will return 2 for the full function call.
+
+### ODD Length Example: 
+If we have the input boolean[] be [true,true,true, false, false,false,false]
+For linear, we will check the values in index 0,1,2,3 and 4.  
+
+For binary we will return the number of times we check the value at the MIDPOINT only.
+
+1) check the midpoint between index 0 and 6 (index 3) see that it is false. So we know that our first false is between 0 and 3. 
+2) Calculate the midpoint between 0 and 3 (1). See that it is true. 
 
 
 ## Approach 1: Linear search (30pts)
