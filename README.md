@@ -50,7 +50,7 @@ For binary we will return the number of times we check the value at the MIDPOINT
 ## Approach 1: Linear search (30pts)
 
 
-Implement findViaLinearSearch(int numberOfChanges, int indexOfFailure), which returns the number of steps it takes to find the bad change. (5 pts)
+Implement findViaLinearSearch(int startIndex, boolean[] changes), which returns the number of steps it takes to find the bad change. (5 pts)
 * What should be returned if our input is [false,false,false]? (5 pts) 
 * Write a one-line description of your approach (5 pts)
 * What is the big-O notation for how long this algorithm takes to run asssuming the worst case scenario? (2.5pts)
@@ -58,7 +58,7 @@ Implement findViaLinearSearch(int numberOfChanges, int indexOfFailure), which re
 * Write 3 test cases in Main.java to ensure that your method works as intended. What are you testing in each case? (10pts)
 
 ## Approach 2: Binary search (35 pts)
-Implement findViaBinarySearch(int numberOfChanges, int indexOfFailure), which returns the number of steps it takes to find the bad change. (10pts)
+Implement findViaBinarySearch(int startIndex, int endIndex, boolean[] changes), which returns the number of steps it takes to find the bad change. (10pts)
 * What should be returned if our input is [true, true, true]? (5 pts) 
 * Write a one-line description of your approach (5 pts)
 * What is the big-O notation for how long this algorithm takes to run asssuming the worst case scenario? (2.5pts)
