@@ -28,7 +28,11 @@ The output will how many times we access different indices
 
 ### Even Length Example: 
 If we have the input boolean[] be [true,true,true, true, false, false]
+
+
 For linear, we will check the values in index 0,1,2,3 and 4.  
+4 is the first time it is false, so we return 5.
+
 
 For binary we will return the number of times we check the value at the MIDPOINT only.
 
@@ -38,20 +42,22 @@ For binary we will return the number of times we check the value at the MIDPOINT
 4) Since we've only calculated 2 midpoints, we will return 2 for the full function call.
 
 ### ODD Length Example: 
-If we have the input boolean[] be [true,true,true, false, false,false,false]
-For linear, we will check the values in index 0,1,2,3 and 4.  
+If we have the input boolean[] be [true,true,false, false, false,false,false]
+For linear, we will check the values in index 0,1,2. So return 3. 
+
 
 For binary we will return the number of times we check the value at the MIDPOINT only.
 
-1) check the midpoint between index 0 and 6 (index 3) see that it is false. So we know that our first false is between 0 and 3. 
-2) Calculate the midpoint between 0 and 3 (1). See that it is true. 
+1) check the midpoint between index 0 and 6 (index 3) see that it is false, so we compare it to the previous (index 2) and see it is false as well. 
+2) Now we are looking between 0 and 2. We calculate the midpoint (index 1). We check the value and see that it is true, so we compare it to the next value (2).
+3) We've found our answer! and calculated 2 midpoints so we return 2.
 
 
 ## Approach 1: Linear search (30pts)
 
 
 Implement findViaLinearSearch(int startIndex, boolean[] changes), which returns the number of steps it takes to find the bad change. (5 pts)
-* What should be returned if our input is [false,false,false]? (5 pts) 
+* What should be returned if our input is [true,true,true]? (5 pts) 
 * Write a one-line description of your approach (5 pts)
 * What is the big-O notation for how long this algorithm takes to run asssuming the worst case scenario? (2.5pts)
 * What about the best-case scenario? Justify (2.5pts)
@@ -59,7 +65,7 @@ Implement findViaLinearSearch(int startIndex, boolean[] changes), which returns 
 
 ## Approach 2: Binary search (35 pts)
 Implement findViaBinarySearch(int startIndex, int endIndex, boolean[] changes), which returns the number of steps it takes to find the bad change. (10pts)
-* What should be returned if our input is [true, true, true]? (5 pts) 
+* What should be returned from findViaBinarySearch(0,2,[false,false,false])? (5 pts) 
 * Write a one-line description of your approach (5 pts)
 * What is the big-O notation for how long this algorithm takes to run asssuming the worst case scenario? (2.5pts)
 * What about the best-case scenario? (2.5pts)
