@@ -9,37 +9,39 @@ you have a set of tests you can run that tells you if the code worked or not, bu
 ## Our inputs
 We have a list of n Changes,with ids ranging from 0 to n-1.
 
-Change id 0 
-Change id 1
-...
-Change id n-1
-
 Since this is an emulation, to create this list we need to know how many changes we are modeling, and the index of the first failure. 
 
 
-Our emulateCodeSubmissions method therefore take in a number of changes to look at, a target index where the change goes bad, and will create an output array of booleans
-that determine if that chnage passes or not. This is already done for you and should be called in both findViaLinearSearch and findViaBinarySearch methods
+Our emulateCodeSubmissions method therefore takes in a number of changes to look at, a target index where the change goes bad, and will create an output array of booleans
+that determine if that chage passes or not. This is already done for you and should be called in both findViaLinearSearch and findViaBinarySearch methods.
+
+
+### Input assumptions
+In an ideal world, we would have both our inputs be positive numbers and have the index of the error always be between 0 and n-1. But our method takes in integers, which can be negative. 
+
+
+> If we get into an input where there is an invalid number of changes, or index of the bad change:
+> YOUR CODE SHOULD RETURN -1
+
 
 ## Our output
-We want to return how many times we need to run our (hypothetical) tests, and print out our bad change.
+We want to return how many times we need to run our (hypothetical) tests to determine our bad change-essentially we need to count how many times we access values in the array we get from the emulateCodeSubmissions method. This is a number, so our output (or return type) is an integer.
 
 
 ## Approach 1: Linear search (30pts)
 
 
 Implement findViaLinearSearch(int numberOfChanges, int indexOfFailure), which returns the number of steps it takes to find the bad change. (5 pts)
-* Ask your TAs a clarifying question about the expected inputs/outputs for an edge case (5pts)
 * Write a one-line description of your approach (5 pts)
-* What is the big-O notation for how long this algorithm takes to run asssuming the worst case scenario? (2.5pts)
-* What about the best-case scenario? (2.5pts)
+* What is the big-O notation for how long this algorithm takes to run asssuming the worst case scenario? Justify(5pts)
+* What about the best-case scenario? Justify (5pts)
 * Write 3 test cases in Main.java to ensure that your method works as intended. What are you testing in each case? (10pts)
 
 ## Approach 2: Binary search (35 pts)
 Implement findViaBinarySearch(int numberOfChanges, int indexOfFailure), which returns the number of steps it takes to find the bad change. (10pts)
-* Ask your TAs a clarifying question about the expected inputs/outputs for an edge case (5 pts)
 * Write a one-line description of your approach (5 pts)
-* What is the big-O notation for how long this algorithm takes to run asssuming the worst case scenario? (2.5pts)
-* What about the best-case scenario? 
+* What is the big-O notation for how long this algorithm takes to run asssuming the worst case scenario? Justify(5pts)
+* What about the best-case scenario? Justify (5pts)
 * Write 3 test cases in Main.java to ensure that your method works as intended. What are you testing in each case? (10pts)
 
 
