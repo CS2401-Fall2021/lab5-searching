@@ -17,11 +17,9 @@ that determine if that chage passes or not. This is already done for you and sho
 
 
 ### Input assumptions
-In an ideal world, we would have both our inputs be positive numbers and have the index of the error always be between 0 and n-1. But our method takes in integers, which can be negative. 
+In an ideal world, we would always have at least one value of False somewhere in our array. But that might not be the case.  
 
-
-> If we get into an input where there is an invalid number of changes, or index of the bad change:
-> YOUR CODE SHOULD RETURN -1
+> IF THE ARRAY IS ENTIRELY TRUE RETURN -1 
 
 
 ## Our output
@@ -32,7 +30,7 @@ We want to return how many times we need to run our (hypothetical) tests to dete
 
 
 Implement findViaLinearSearch(int numberOfChanges, int indexOfFailure), which returns the number of steps it takes to find the bad change. (5 pts)
-* What should be returned if indexOfFailure>=numberOfChanges? (5 pts)
+* What should be returned if our input is [false,false,false]? (5 pts) 
 * Write a one-line description of your approach (5 pts)
 * What is the big-O notation for how long this algorithm takes to run asssuming the worst case scenario? (2.5pts)
 * What about the best-case scenario? Justify (2.5pts)
@@ -40,7 +38,7 @@ Implement findViaLinearSearch(int numberOfChanges, int indexOfFailure), which re
 
 ## Approach 2: Binary search (35 pts)
 Implement findViaBinarySearch(int numberOfChanges, int indexOfFailure), which returns the number of steps it takes to find the bad change. (10pts)
-* What should be returned if indexOfFailure is negative? (5pts)
+* What should be returned if our input is [true, true, true]? (5 pts) 
 * Write a one-line description of your approach (5 pts)
 * What is the big-O notation for how long this algorithm takes to run asssuming the worst case scenario? (2.5pts)
 * What about the best-case scenario? (2.5pts)
