@@ -10,10 +10,10 @@ public class Test {
     int n =Integer.parseInt(inputs[1]);
     int i =Integer.parseInt(inputs[2]);
     if(inputs[0].equals("ls")){
-      System.out.println("l:"+BugFinder.findViaLinearSearch(emulateCodeSubmissions(n,i)));
+      System.out.println("l:"+BugFinder.findViaLinearSearch(0,emulateCodeSubmissions(n,i)));
     }
     if(inputs[0].equals("bs")){
-      System.out.println("b:"+BugFinder.findViaBinarySearch(emulateCodeSubmissions(n,i)));
+      System.out.println("b:"+BugFinder.findViaBinarySearch(0,n-1,emulateCodeSubmissions(n,i)));
     }
     if(inputs[0].equals("c")){
       System.out.println("c:"+BugFinder.isBinarySearchBetter(emulateCodeSubmissions(n,i)));
