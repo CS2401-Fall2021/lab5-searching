@@ -7,10 +7,9 @@ List of changes that have been made between now and the last time you checked th
 you have a set of tests you can run that tells you if the code worked or not, but they take a long time to run, so you want to be strategic about which ones you test.
 
 ## Our inputs
-We have a list of n Changes,with ids ranging from 0 to n-1.
+We have a list of n changes, with ids ranging from 0 to n-1.
 
 Since this is an emulation, to create this list we need to know how many changes we are modeling, and the index of the first failure. 
-
 
 Our emulateCodeSubmissions method therefore takes in a number of changes to look at, a target index where the change goes bad, and will create an output array of booleans
 that determine if that chage passes or not. This is already done for you and should be called in both findViaLinearSearch and findViaBinarySearch methods.
